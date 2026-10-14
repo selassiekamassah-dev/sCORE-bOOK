@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Score Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Student Score Book</h1>
+
+    <form id="add-form" class="row" novalidate>
+      <div class="field">
+        <label for="name-input">Student name</label>
+        <input id="name-input" type="text" maxlength="30" autocomplete="off">
+      </div>
+      <div class="field field-small">
+        <label for="score-input">Score (0-100)</label>
+        <input id="score-input" type="number" min="0" max="100" step="1">
+      </div>
+      <button type="submit" class="btn btn-primary">Add student</button>
+    </form>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+
+    <div class="row row-between">
+      <div class="field">
+        <label for="search-input">Search by name</label>
+        <input id="search-input" type="search" autocomplete="off">
+      </div>
+      <div class="buttons">
+        <button type="button" class="btn" id="sort-btn">Sort high to low</button>
+        <button type="button" class="btn" id="sample-btn">Reset sample data</button>
+        <button type="button" class="btn" id="clear-btn">Clear all</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="students">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Score</th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="visually-hidden">Action</span></th>
+          </tr>
+        </thead>
+        <tbody id="student-rows"></tbody>
+      </table>
+    </div>
+
+    <h2>Summary</h2>
+    <div class="table-wrap">
+      <table class="summary">
+        <tbody id="summary-rows"></tbody>
+      </table>
+    </div>
+
+    <div class="field field-small pass-field">
+      <label for="pass-input">Pass mark</label>
+      <input id="pass-input" type="number" min="0" max="100" step="1" value="50">
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

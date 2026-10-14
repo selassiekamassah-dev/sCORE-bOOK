@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #222222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+h1 { font-size: 28px; margin: 0 0 24px; }
+h2 { font-size: 20px; margin: 32px 0 12px; }
+
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.row-between { justify-content: space-between; margin-top: 8px; }
+
+.field { display: flex; flex-direction: column; gap: 4px; flex: 1 1 200px; }
+.field-small { flex: 0 1 140px; }
+.pass-field { margin-top: 16px; width: 140px; }
+
+label { font-size: 14px; font-weight: bold; }
+
+input {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #222222;
+  width: 100%;
+}
+
+.btn {
+  font: inherit;
+  padding: 8px 14px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  background: #f2f2f2;
+  color: #222222;
+  cursor: pointer;
+}
+.btn:hover { background: #e4e4e4; }
+.btn-primary { background: #1f4e8c; border-color: #1f4e8c; color: #ffffff; }
+.btn-primary:hover { background: #173b6a; }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+
+:focus-visible { outline: 2px solid #1f4e8c; outline-offset: 2px; }
+
+.message { min-height: 24px; margin: 8px 0 0; font-size: 14px; color: #444444; }
+
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #cccccc; padding: 8px 10px; text-align: left; }
+thead th { background: #f2f2f2; }
+td.num, th.num { text-align: right; }
+tr.match td { background: #fff6cc; }
+.empty { color: #666666; text-align: center; }
+
+.pass { color: #1b6e3a; }
+.fail { color: #b3261e; }
+
+.summary th { width: 50%; background: #f2f2f2; font-weight: bold; }
+
+.btn-remove {
+  font: inherit; font-size: 14px;
+  padding: 4px 10px;
+  border: 1px solid #999999; border-radius: 3px;
+  background: #ffffff; color: #222222; cursor: pointer;
+}
+.btn-remove:hover { background: #f2f2f2; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
